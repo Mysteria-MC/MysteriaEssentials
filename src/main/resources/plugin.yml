@@ -1,0 +1,5 @@
+name: [PLUGINNAME]
+version: ${project.version}
+description: Beschreibung
+main: net.mysteria.[NAMESPACE].[MAINCLASS]
+author: MysteriaNet
