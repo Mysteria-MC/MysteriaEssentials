@@ -1,5 +1,11 @@
-name: [PLUGINNAME]
-version: ${project.version}
-description: Beschreibung
-main: net.mysteria.[NAMESPACE].[MAINCLASS]
-author: MysteriaNet
+name: MysteriaEssentials
+version: 1.0.0
+api-version: 1.18
+description: Fügt einige standart Commands hinzu
+main: net.mysteria.essentials.main.Main
+author: IceCream
+
+commands:
+  gm:
+     description: Setzt dich in den GameMode deiner Wahl
+     usage: /gm <GameMode(0|1|2|3)>
