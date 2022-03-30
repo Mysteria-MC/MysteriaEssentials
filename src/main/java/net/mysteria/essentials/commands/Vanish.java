@@ -37,12 +37,12 @@ public class Vanish implements CommandExecutor {
 		if(player.isInvisible()) {
 			player.setInvisible(false);
 			for(Player other : Bukkit.getServer().getOnlinePlayers()) {
-				other.hidePlayer(player);
+				other.showPlayer(player);
 			}
 		} else if(!(player.isInvisible())) {
 			player.setInvisible(true);
 			for(Player other : Bukkit.getServer().getOnlinePlayers()) {
-				other.showPlayer(player);
+				other.hidePlayer(player);
 			}
 			return true;
 		}
