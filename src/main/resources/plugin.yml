@@ -9,3 +9,9 @@ commands:
   gm:
      description: Setzt dich in den GameMode deiner Wahl
      usage: /gm <GameMode(0|1|2|3)>
+     aliases: [gmode]
+  vanish:
+     description: Macht die unsichtbar und löscht deinen Namen von der TabList
+     usage: /vanish
+     aliases: [v]
+     
