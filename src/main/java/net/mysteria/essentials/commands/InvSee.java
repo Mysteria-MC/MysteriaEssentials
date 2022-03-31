@@ -8,10 +8,10 @@ import org.bukkit.entity.Player;
 
 import net.mysteria.essentials.main.Main;
 
-public class Vanish implements CommandExecutor {
+public class InvSee implements CommandExecutor{
 	
-	public Vanish(Main plugin) {
-		plugin.getCommand("vanish").setExecutor(this);
+	public InvSee(Main plugin) {
+		plugin.getCommand("invsee").setExecutor(this);
 	}
 
 	@Override
@@ -24,31 +24,31 @@ public class Vanish implements CommandExecutor {
 		
 		Player player = (Player) sender;
 		
-		if(!(player.hasPermission("mysterial.essentials.vanish"))) {
+		if(!(player.hasPermission("mysteria.essentials.invsee"))) {
 			player.sendMessage("§cDu hast nicht die benötigte Berechtigung um diesen Command auszuführen");
 			return false;
 		}
 		
-		if(args.length > 0) {
-			player.sendMessage("§cDieser Command lässt keine Argumente zu");
+		if(args.length < 1) {
+			player.sendMessage("§cDu musst einen Spieler angeben dessen Inventar du sehen möchtest");
 			return false;
 		}
 		
-		if(player.isInvisible()) {
-			player.setInvisible(false);
-			for(Player other : Bukkit.getServer().getOnlinePlayers()) {
-				other.showPlayer(player);
-			}
-			return true;
-		} else if(!(player.isInvisible())) {
-			player.setInvisible(true);
-			for(Player other : Bukkit.getServer().getOnlinePlayers()) {
-				other.hidePlayer(player);
-			}
-			return true;
+		Player target = Bukkit.getPlayerExact(args[0]);
+		
+		if(!(target instanceof Player)) {
+			player.sendMessage("§cDas angegebene Ziel ist kein Spieler");
+			return false;
 		}
 		
-		return false;
+		if(!(target.isOnline())) {
+			player.sendMessage("§cDer angegebene Spieler ist zur Zeit nicht online");
+			return false;
+		}
+		
+		player.openInventory(target.getInventory());
+		
+		return true;
 	}
 
 }
