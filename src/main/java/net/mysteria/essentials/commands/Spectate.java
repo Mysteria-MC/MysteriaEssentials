@@ -22,19 +22,19 @@ public class Spectate implements CommandExecutor {
 	public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
 		
 		if(!(sender instanceof Player)) {
-			sender.sendMessage("Â§cDieser Command ist nur fÃ¼r Spieler");
+			sender.sendMessage("§cDieser Command ist nur für Spieler");
 			return false;
 		}
 		
 		Player player = (Player) sender;
 		
 		if(!(player.hasPermission("mysteria.essentials.spectate"))) {
-			player.sendMessage("Â§cDu hast nicht die benÃ¶tigten Rechte um diesen Command auszufÃ¼hren");
+			player.sendMessage("§cDu hast nicht die benötigten Rechte um diesen Command auszuführen");
 			return false;
 		}
 		
 		if(args.length < 1) {
-			player.sendMessage("Â§cDu musst einen Spieler angeben dem du zuschauen mÃ¶chtest");
+			player.sendMessage("§cDu musst einen Spieler angeben dem du zuschauen möchtest");
 			return false;
 		}
 		
@@ -47,7 +47,7 @@ public class Spectate implements CommandExecutor {
 			
 			player.setGameMode(GameMode.CREATIVE);
 			
-			player.sendMessage("Â§aDu hast den Spectator Modus verlassen");
+			player.sendMessage("§aDu hast den Spectator Modus verlassen");
 			
 			return true;
 		}
@@ -55,12 +55,12 @@ public class Spectate implements CommandExecutor {
 		Player target = Bukkit.getPlayerExact(args[0]);
 		
 		if(!(target instanceof Player)) {
-			player.sendMessage("Â§cDas angegebene Ziel ist kein Spieler");
+			player.sendMessage("§cDas angegebene Ziel ist kein Spieler");
 			return false;
 		}
 		
 		if(!(target.isOnline())) {
-			player.sendMessage("Â§cDer angegebene Spieler ist zur Zeit nicht online");
+			player.sendMessage("§cDer angegebene Spieler ist zur Zeit nicht online");
 			return false;
 		}
 		

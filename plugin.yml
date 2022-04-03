@@ -16,8 +16,8 @@ commands:
      aliases: [v]
   invsee:
      description: Zeigt dir das Inventar des angegebenen Spielers
-     usage: /invsee <Spiler>
-     aliases: [showinventory, is]
+     usage: /invsee <Spieler>
+     aliases: [showinventory]
   spectate:
      description: Lässt dich in die sicht eines anderen Spielers schlüpfen
      usage: /spectate <Spieler>

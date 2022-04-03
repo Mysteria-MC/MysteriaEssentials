@@ -18,19 +18,19 @@ public class GMode implements CommandExecutor {
 	public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
 		
 		if(!(sender instanceof Player)) {
-			sender.sendMessage("Â§cDieser Command kann nur von Spielern ausgefÃ¼hrt werden");
+			sender.sendMessage("§cDieser Command kann nur von Spielern ausgeführt werden");
 			return false;
 		}
 		
 		Player player = (Player) sender;
 		
 		if(!(player.hasPermission("mysteria.essentials.gamemode"))) {
-			player.sendMessage("Â§cDu hast nicht die benÃ¶tigten Rechte um dies zu tun");
+			player.sendMessage("§cDu hast nicht die benötigten Rechte um dies zu tun");
 			return false;
 		}
 		
 		if(args.length < 1) {
-			player.sendMessage("Â§cDu musst einen GameMode angeben in den du wechseln mÃ¶chtest");
+			player.sendMessage("§cDu musst einen GameMode angeben in den du wechseln möchtest");
 			return false;
 		}
 		
@@ -40,22 +40,22 @@ public class GMode implements CommandExecutor {
 		
 		case 0:
 			player.setGameMode(GameMode.SURVIVAL);
-			player.sendMessage("Â§aDein Spielmodus wurde erfolgreich auf Ãœberleben gesetzt");
+			player.sendMessage("§aDein Spielmodus wurde erfolgreich auf Überleben gesetzt");
 			return true;
 		
 		case 1:
 			player.setGameMode(GameMode.CREATIVE);
-			player.sendMessage("Â§aDein Spielmodus wurde erfolgreich auf Kreativ gesetzt");
+			player.sendMessage("§aDein Spielmodus wurde erfolgreich auf Kreativ gesetzt");
 			return true;
 			
 		case 2:
 			player.setGameMode(GameMode.ADVENTURE);
-			player.sendMessage("Â§aDein Spielmodus wurde erfolgreich auf Abenteuer gesetzt");
+			player.sendMessage("§aDein Spielmodus wurde erfolgreich auf Abenteuer gesetzt");
 			return true;
 		
 		case 3:
 			player.setGameMode(GameMode.SPECTATOR);
-			player.sendMessage("Â§aDein Spielmodus wurde erfolgreich auf Zuschauer gesetzt");
+			player.sendMessage("§aDein Spielmodus wurde erfolgreich auf Zuschauer gesetzt");
 			return true;
 		
 		}

@@ -1,12 +1,13 @@
 package net.mysteria.essentials.main;
 
+import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import net.mysteria.essentials.commands.GMode;
 import net.mysteria.essentials.commands.Vanish;
 import net.mysteria.essentials.commands.InvSee;
-import net.mysteria.essentials.commands.Info;
 import net.mysteria.essentials.commands.Spectate;
+import net.mysteria.essentials.listener.Listeners;
 
 public class Main extends JavaPlugin {
 
@@ -17,6 +18,7 @@ public class Main extends JavaPlugin {
 		new InvSee(this);
 		new Spectate(this);
 		
+		Bukkit.getServer().getPluginManager().registerEvents(new Listeners(), this);
 		
 	}
 	
