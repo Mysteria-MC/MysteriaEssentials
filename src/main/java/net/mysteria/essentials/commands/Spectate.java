@@ -9,6 +9,8 @@ import org.bukkit.craftbukkit.v1_18_R1.entity.CraftPlayer;
 import org.bukkit.entity.Player;
 
 import net.minecraft.network.protocol.game.PacketPlayOutCamera;
+import net.minecraft.server.level.EntityPlayer;
+import net.minecraft.server.network.PlayerConnection;
 import net.mysteria.essentials.main.Main;
 
 public class Spectate implements CommandExecutor {
@@ -39,11 +41,13 @@ public class Spectate implements CommandExecutor {
 		
 		if(args[0].equalsIgnoreCase("leave")) {
 			
-			CraftPlayer cp = (CraftPlayer) player;
+			CraftPlayer craftPlayer = (CraftPlayer) player;
+			EntityPlayer entityPlayer = craftPlayer.getHandle();
+			PlayerConnection connection = entityPlayer.b;
 			
-			PacketPlayOutCamera cam = new PacketPlayOutCamera(cp.getHandle());
+			PacketPlayOutCamera cam = new PacketPlayOutCamera(entityPlayer);
 			
-			cp.getHandle().b.a(cam);
+			connection.a(cam);
 			
 			player.setGameMode(GameMode.CREATIVE);
 			
@@ -66,11 +70,13 @@ public class Spectate implements CommandExecutor {
 		
 		player.setGameMode(GameMode.SPECTATOR);
 		
-		CraftPlayer cp = (CraftPlayer) player;
+		CraftPlayer craftPlayer = (CraftPlayer) player;
+		EntityPlayer entityPlayer = craftPlayer.getHandle();
+		PlayerConnection connection = entityPlayer.b;
 		
-		PacketPlayOutCamera cam = new PacketPlayOutCamera(cp.getHandle());
+		PacketPlayOutCamera cam = new PacketPlayOutCamera(((CraftPlayer)target).getHandle());
 		
-		cp.getHandle().b.a(cam);
+		connection.a(cam);
 		
 		player.sendMessage("§aDu schaust jetzt " + target.getName() + " zu");
 		

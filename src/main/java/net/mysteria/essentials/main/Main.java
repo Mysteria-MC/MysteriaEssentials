@@ -19,6 +19,7 @@ public class Main extends JavaPlugin {
 		new Spectate(this);
 		
 		Bukkit.getServer().getPluginManager().registerEvents(new Listeners(), this);
+		Thread.currentThread().setContextClassLoader(getClass().getClassLoader());
 		
 	}
 	
