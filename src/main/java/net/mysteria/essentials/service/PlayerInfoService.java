@@ -82,7 +82,7 @@ public class PlayerInfoService {
 
 	}
 
-	public static void updateLastTimeSeen(String username, Date lts) {
+	public static void updateLastTimeSeen(String username, String lts) {
 		EntityManager em = ENTITY_MANAGER_FACTORY.createEntityManager();
 		EntityTransaction et = null;
 		PlayerInfoEntity playerInfo = getPlayerEntityByUsername(username);

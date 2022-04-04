@@ -5,8 +5,8 @@ import java.sql.Date;
 public class PlayerInfoModel {
 	
 	private String username;
-	private Date lastTimeSeen;
-	private Date firstTimeSeen;
+	private String lastTimeSeen;
+	private String firstTimeSeen;
 	
 	public PlayerInfoModel() {
 		
@@ -20,19 +20,19 @@ public class PlayerInfoModel {
 		this.username = username;
 	}
 
-	public Date getLastTimeSeen() {
+	public String getLastTimeSeen() {
 		return lastTimeSeen;
 	}
 
-	public void setLastTimeSeen(Date lastTimeSeen) {
+	public void setLastTimeSeen(String lastTimeSeen) {
 		this.lastTimeSeen = lastTimeSeen;
 	}
 
-	public Date getFirstTimeSeen() {
+	public String getFirstTimeSeen() {
 		return firstTimeSeen;
 	}
 
-	public void setFirstTimeSeen(Date firstTimeSeen) {
+	public void setFirstTimeSeen(String firstTimeSeen) {
 		this.firstTimeSeen = firstTimeSeen;
 	}
 
