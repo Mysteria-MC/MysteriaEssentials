@@ -1,7 +1,5 @@
 package net.mysteria.essentials.service;
 
-import java.sql.Date;
-
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;

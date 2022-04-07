@@ -13,7 +13,7 @@ import net.mysteria.essentials.service.PlayerInfoService;
 public class Info implements CommandExecutor {
 	
 	public Info(Main plugin) {
-		plugin.getCommand("invsee").setExecutor(this);
+		plugin.getCommand("info").setExecutor(this);
 	}
 
 	@Override

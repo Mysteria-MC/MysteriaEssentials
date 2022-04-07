@@ -1,7 +1,7 @@
 name: MysteriaEssentials
 version: 1.0.0
 api-version: 1.18
-description: Fügt einige standart Commands hinzu
+description: Fuegt einige standard Commands hinzu
 main: net.mysteria.essentials.main.Main
 author: IceCream
 
@@ -11,7 +11,7 @@ commands:
      usage: /gm <GameMode(0|1|2|3)>
      aliases: [gmode]
   vanish:
-     description: Macht die unsichtbar und löscht deinen Namen von der TabList
+     description: Macht die unsichtbar und loescht deinen Namen von der TabList
      usage: /vanish
      aliases: [v]
   invsee:
@@ -19,6 +19,10 @@ commands:
      usage: /invsee <Spieler>
      aliases: [showinventory]
   spectate:
-     description: Lässt dich in die sicht eines anderen Spielers schlüpfen
+     description: Laesst dich in die sicht eines anderen Spielers schluepfen
      usage: /spectate <Spieler>
      aliases: [sp]
+  info:
+     description: Zeigt dir generelle Infos ueber den Spieler
+     usage: /info <Spieler>
+     aliases: [playerinfo, showinfo]

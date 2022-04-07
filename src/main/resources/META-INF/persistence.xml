@@ -7,7 +7,7 @@
     	<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
     	<properties>
     		<property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
-    		<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/accounts"/>
+    		<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/playerinfo"/>
     		<property name="javax.persistence.jdbc.user" value="dbadmin"/>
     		<property name="javax.persistence.jdbc.password" value="superstrongpassword"/>
     		<property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect"/>

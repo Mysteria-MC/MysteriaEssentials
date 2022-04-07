@@ -1,7 +1,5 @@
 package net.mysteria.essentials.persistence;
 
-import java.sql.Date;
-
 import javax.persistence.Column;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;

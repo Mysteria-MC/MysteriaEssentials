@@ -34,7 +34,7 @@ public class Listeners implements Listener {
 		
 		Player player = event.getPlayer();
 		
-		if(player.getFirstPlayed() == 0) {
+		if(!(player.hasPlayedBefore())) {
 			
 			PlayerInfoModel model = new PlayerInfoModel();
 			model.setFirstTimeSeen(LocalDate.now().toString());
@@ -43,7 +43,11 @@ public class Listeners implements Listener {
 			
 			PlayerInfoService.addPlayerInfo(model);
 			
+			player.sendTitle("§aHerzlich willkommen auf dem Server", "Du bist zum ersten mal hier");
+			
 		}
+		
+		player.sendTitle("§aHerzlich Willkommen", null);
 		
 	}
 	
