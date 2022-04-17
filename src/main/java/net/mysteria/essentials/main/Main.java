@@ -5,6 +5,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 import net.mysteria.essentials.commands.GMode;
 import net.mysteria.essentials.commands.Vanish;
+import net.mysteria.essentials.configuration.PersistenceXMLConfig;
 import net.mysteria.essentials.commands.InvSee;
 import net.mysteria.essentials.commands.Spectate;
 import net.mysteria.essentials.commands.Info;
@@ -15,6 +16,9 @@ public class Main extends JavaPlugin {
 	public void onEnable() {
 		
 		loadConfig();
+		
+		PersistenceXMLConfig persistenceXMLConfig = PersistenceXMLConfig.getInstance(this);
+		persistenceXMLConfig.writePersistenceXML();
 		
 		new GMode(this);
 		new Vanish(this);
@@ -28,8 +32,8 @@ public class Main extends JavaPlugin {
 	}
 	
 	private void loadConfig() {
-		getConfig().options().copyDefaults(true);
-		saveConfig();
+		getConfig().options().copyDefaults();
+		saveDefaultConfig();
 	}
 	
 }

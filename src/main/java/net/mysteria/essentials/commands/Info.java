@@ -1,6 +1,7 @@
 package net.mysteria.essentials.commands;
 
 import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -43,7 +44,7 @@ public class Info implements CommandExecutor {
 		int ping = target.getPing();
 		String ip = target.getAddress().getHostName();
 		
-		sender.sendMessage("Informationenen über " + target.getName() + "\nBeigetreten am: " + firstTimeSeen + "\nZuletzt gesehen am: " + lastTimeSeen + "\nIP: " + ip + " Ping: " + ping);
+		sender.sendMessage(ChatColor.GREEN + "Informationenen über "+ ChatColor.BLUE + target.getName() + ChatColor.GOLD + "\nBeigetreten am: " + ChatColor.DARK_RED + firstTimeSeen + ChatColor.GOLD + "\nZuletzt gesehen am: " + ChatColor.DARK_RED + lastTimeSeen + ChatColor.GOLD + "\nIP: " + ChatColor.DARK_RED +  ip + ChatColor.GOLD + " Ping: "+ ChatColor.DARK_RED + ping);
 		
 		return true;
 	}

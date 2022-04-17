@@ -1,5 +1,5 @@
-driver:
-url:
-user:
-password:
-dialect:
+driver: 'com.mysql.cj.jdbc.Driver'
+url: 'jdbc:mysql://localhost:3306/mysteria_essentials'
+username: 'dbadmin'
+password: 'superstrongpassword'
+dialect: 'org.hibernate.dialect.MySQLDialect'
