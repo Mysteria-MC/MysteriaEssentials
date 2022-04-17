@@ -17,8 +17,8 @@ public class Main extends JavaPlugin {
 		
 		loadConfig();
 		
-		PersistenceXMLConfig persistenceXMLConfig = PersistenceXMLConfig.getInstance(this);
-		persistenceXMLConfig.writePersistenceXML();
+//		PersistenceXMLConfig persistenceXMLConfig = PersistenceXMLConfig.getInstance(this);
+//		persistenceXMLConfig.writePersistenceXML();
 		
 		new GMode(this);
 		new Vanish(this);
